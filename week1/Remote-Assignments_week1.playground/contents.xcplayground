@@ -6,5 +6,6 @@
         <page name='Part 03_Collection'/>
         <page name='Part 04_Control Flow'/>
         <page name='Part 05_Function'/>
+        <page name='Revision'/>
     </pages>
 </playground>
