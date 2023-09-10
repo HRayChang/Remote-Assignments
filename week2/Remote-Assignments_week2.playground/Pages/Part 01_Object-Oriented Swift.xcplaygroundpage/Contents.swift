@@ -13,6 +13,28 @@ import Foundation
   
     Ans:
  */
+        enum Gender {
+            case male
+            case female
+            case undefined
+        }
+
+        class Animal {
+            
+            var gender: Gender
+            
+            init(gender: Gender) {
+                self.gender = gender
+            }
+            
+            class func eat() {
+                print("I eat everything!")
+            }
+        }
+
+        Animal.eat()
+
+print("---------- ----------")
 
 //:----
 /*:
@@ -20,6 +42,31 @@ import Foundation
  
     Ans:
  */
+        class Elephant: Animal {
+            class override func eat() {
+                print("I eat greens!")
+            }
+        }
+
+        Elephant.eat()
+
+        class Horse: Animal {
+            class override func eat() {
+                print("I eat greens!")
+            }
+        }
+
+        Horse.eat()
+
+        class Tiger: Animal {
+            class override func eat() {
+                print("I eat meats!")
+            }
+        }
+
+        Tiger.eat()
+
+print("---------- ----------")
 
 //:----
 /*:
@@ -41,12 +88,34 @@ import Foundation
  
     Ans:
  */
+        class Zoo {
+            
+            var weeklyHot: Animal
+            
+            init(weeklyHot: Animal) {
+                self.weeklyHot = weeklyHot
+            }
+        }
+         
+        let zoo = Zoo(weeklyHot: Tiger(gender: .undefined))
+
+        let tiger = Tiger(gender: .undefined)
+        let elephant = Elephant(gender: .undefined)
+        let horse = Horse(gender: .undefined)
+
+        zoo.weeklyHot = tiger
+        zoo.weeklyHot = elephant
+        zoo.weeklyHot = horse
+
+print("---------- ----------")
 
 //:----
 /*:
     4. What is an instance? What does Initilizer do in Class and Struct?
  
     Ans:
+
+        Instance: When we declare a struct or class, it's just a declaration, it doesn't do anything. Think of it like a blueprint for a building. To use them we need to create an instance of them, we can think of this as turning this blueprint for a building into an actual building.
  */
 
 //:----
@@ -76,6 +145,10 @@ import Foundation
     7. What’s the difference between instance method and type method ?
  
     Ans:
+ 
+        Instance method: An instance method needs an instance to execute the method. Instance method needs to be called on an instance and cannot be called on a type.
+ 
+        Type method: Type method prefix with the static or class keyword. That keyword tells the compiler this is a type method. A type method can only be called on the type that defines the type method.
  */
 
 //:----
@@ -83,7 +156,11 @@ import Foundation
     8. What does self mean in an instance method and a type method respectively?
  
     Ans:
- */
+ 
+        Self in an instance method: Every instance of a type has an implicit self property, which is exactly equivalent to the instance itself. We can use the self property to refer to the current instance within its own instance methods.
+ 
+        Self in a type method: The implicit self property refers to the type itself, rather than an instance of that type.
+*/
 
 //:----
-//: ## [Next: Part 02_](@next)
+//: ## [Next: Part 02_Enumerations and Optionals in Swift](@next)
