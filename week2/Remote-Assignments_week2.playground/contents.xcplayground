@@ -5,5 +5,6 @@
         <page name='Part 02_Enumerations and Optionals in Swift'/>
         <page name='Part 03_Protocol in Swift'/>
         <page name='Part 04_Error Handling in Swift'/>
+        <page name='Revision'/>
     </pages>
 </playground>
