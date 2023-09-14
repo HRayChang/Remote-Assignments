@@ -35,14 +35,15 @@ class ViewController: UIViewController {
     func change() {
         if text.count == color.count {
             let totalArrayNumber = text.count - 1
-            
+             
             let randomNumber = Int.random(in: 0...totalArrayNumber)
-            
+             
             backgroundImageView.backgroundColor = color[randomNumber]
             labelTextView.text = text[randomNumber]
         } else {
             fatalError("Numbers of color and numbers of text are not the same!")
         }
     }
+    
 }
 
