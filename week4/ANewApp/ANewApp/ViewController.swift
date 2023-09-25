@@ -21,9 +21,7 @@ class ViewController: UIViewController {
     
     func getStationData() {
         let url = URL(string: "https://remote-assignment.s3.ap-northeast-1.amazonaws.com/station")!
-        URLSession.shared.dataTask(with: url) {
-            
-            (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             guard let httpResponse = response as? HTTPURLResponse,
                   httpResponse.statusCode == 200 else {
